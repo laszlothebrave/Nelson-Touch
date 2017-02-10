@@ -5,7 +5,7 @@
 Gra::Gra():window(sf::VideoMode(900,600),"Statki v.0.1"){
 		plansza = Plansza(sf::Vector2f(28, 128));	
 }
-
+//
 void Gra::processEvents(){
 	sf::Event event;
 	while (window.pollEvent(event))
