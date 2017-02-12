@@ -5,6 +5,8 @@
 #include <SFML/Window.hpp>
 #include "plansza.h"
 #include "statek.h"
+#include <vector>
+
 class Gra{
 	public: 
 	
@@ -16,15 +18,19 @@ class Gra{
 	void processEvents();
 	void update();
 	void render();
-	sf::Vector2i getMousePosition();
-	void setStatek();
-	bool sprawdzPole(sf::Vector2i);
-	void draw();
-	int shipClicked();
+	void createShips();
+	int indexOfClickedShip();
 	sf::Vector2f getIndex();
-private:
-		
+	sf::Vector2f getMousePosition();
+	sf::Vector2i indexOfFieldMouseOn();
+	bool isVectorInsideRect(sf::Vector2f vector, sf::Vector2f position, sf::Vector2f size);
+	
+	private:	
+
+	int isHold;
 	sf::RenderWindow window;	
 	Plansza plansza;
+	vector<Statek*> statki;
+
 };
 #endif

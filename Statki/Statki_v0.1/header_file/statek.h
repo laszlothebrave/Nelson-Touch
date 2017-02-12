@@ -5,21 +5,21 @@
 #include <SFML/Window.hpp>
 
 class Statek{	
-	public:
+
+public:
 
 	Statek(int dlugosc,int pozycja);
+	void draw(sf::RenderTarget& target);
+	void rotate();
 	
+public:
+	
+	sf::RectangleShape statek;
+	sf::Texture texture;
+
 	int pozycja;
 	int dlugosc;
-	sf::Vector2f dlugoscV;
-	
-	int wsp[2][4];
 	bool postawiony;
 
-	sf::RectangleShape statek;
-	
-	void draw(sf::RenderTarget& target){
-		target.draw(statek);
-	}
 };
 #endif
