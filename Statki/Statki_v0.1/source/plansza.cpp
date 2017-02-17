@@ -1,5 +1,4 @@
-#include "plansza.h"
-#include <iostream>
+#include "gra.h"
 
 using namespace std;
 
@@ -24,8 +23,9 @@ Plansza::Plansza(sf::Vector2f pozycja,sf::Vector2f rozmiar):pozycja(pozycja),roz
 			else if (i!=0 && j!=0){
 				sf::RectangleShape pole = createField(i, j);
 				pola[i][j] = pole;
-				mapa[i][j] = Pole::woda;
+				
 			}
+			mapa[i][j] = Pole::woda;	
 		}
 	}
 }

@@ -1,6 +1,4 @@
 #include "gra.h"
-#include "plansza.h"
-#include "statek.h"
 
 int main()
 {

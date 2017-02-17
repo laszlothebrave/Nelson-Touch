@@ -6,6 +6,7 @@
 #include "plansza.h"
 #include "statek.h"
 #include <vector>
+#include <iostream>
 
 class Gra{
 	public: 

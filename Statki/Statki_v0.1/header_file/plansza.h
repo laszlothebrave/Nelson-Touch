@@ -5,7 +5,7 @@
 #include <SFML/Window.hpp>
 #include <vector>
 #include <string>
-#include "statek.h"
+#include "gra.h"
 
 using namespace std;
 
@@ -13,6 +13,7 @@ class Plansza
 {
 	
 	public :
+		
 		Plansza(){};
 		Plansza(sf::Vector2f position, sf::Vector2f rozmiar);
 
@@ -21,6 +22,7 @@ class Plansza
 		bool isMapaFull();
 		
 	public :
+		
 		enum Pole{woda,statek,trafiony,zatopiony, pudlo};
 		
 		Pole mapa[11][11];
